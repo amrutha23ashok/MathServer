@@ -31,6 +31,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 # index.html:
+```
 <html>
 
 <head>
@@ -82,6 +83,7 @@ Publish the website in the given URL.
 
         }
     </style>
+    
 </head>
 
 <body>
@@ -109,8 +111,10 @@ Publish the website in the given URL.
 
 </html>
 
+```
 
 # views.py:
+```
 from django.shortcuts import render
 
 def rectarea(request):
@@ -131,8 +135,9 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'mathapp/index.html',context)
-
+```
 # urls.py:
+```
 """
 URL configuration for mathser project.
 
@@ -157,7 +162,7 @@ urlpatterns = [
     path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
     path('',views.rectarea,name="areaofrectangleroot")
 ]
-
+```
 # OUTPUT:
 ![Screenshot 2023-11-15 183421](https://github.com/amrutha23ashok/MathServer/assets/120772913/4f1a5131-3fc8-41e8-bda9-4d0a248ca1d8)
 
