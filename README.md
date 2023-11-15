@@ -30,8 +30,8 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
-# index.html:
-
+PROGRAM :
+index.html
 <html>
 
 <head>
@@ -109,9 +109,7 @@ Publish the website in the given URL.
 </body>
 
 </html>
-```
-# views.py:
-```
+views.py
 from django.shortcuts import render
 
 def rectarea(request):
@@ -132,9 +130,7 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'mathapp/index.html',context)
-```
-# urls.py:
-```
+urls.py
 """
 URL configuration for mathser project.
 
@@ -159,9 +155,8 @@ urlpatterns = [
     path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
     path('',views.rectarea,name="areaofrectangleroot")
 ]
-```
-# OUTPUT:
-![image](https://github.com/amrutha23ashok/MathServer/assets/120772913/57397671-954e-4dbe-9777-658081938f99)
+OUTPUT:
+Screenshot 2023-11-15 154606
 
-## RESULT:
+RESULT:
 The program for performing server side processing is completed successfully.
