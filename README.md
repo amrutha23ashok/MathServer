@@ -109,8 +109,9 @@ Publish the website in the given URL.
 </body>
 
 </html>
-
+```
 # views.py:
+```
 from django.shortcuts import render
 
 def rectarea(request):
@@ -131,9 +132,9 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'mathapp/index.html',context)
-
+```
 # urls.py:
-
+```
 """
 URL configuration for mathser project.
 
@@ -158,7 +159,7 @@ urlpatterns = [
     path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
     path('',views.rectarea,name="areaofrectangleroot")
 ]
-
+```
 # OUTPUT:
 ![image](https://github.com/amrutha23ashok/MathServer/assets/120772913/57397671-954e-4dbe-9777-658081938f99)
 
